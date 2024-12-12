@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Image Upload</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://img.freepik.com/free-photo/top-view-desk-with-black-friday-gifts_23-2148288216.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #6a3e8f;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #7a4ab0;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f4f8fd;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        input[type="file"]:hover {
+            border-color: #7a4ab0;
+            background-color: #f0f4fb;
+        }
+
+        button {
+            background: linear-gradient(135deg, #8b6cf0, #6a4fbc);
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(106, 79, 188, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #6a4fbc, #533299);
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #6a3e8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a Product Image</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file">Select an image:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Upload Image</button>
+        </form>
+    </div>
+</body>
+</html>

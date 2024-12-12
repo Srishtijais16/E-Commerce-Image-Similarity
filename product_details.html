@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product['productDisplayName'] }} Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI0XiXFpFHzGoY4AfNFG9eMoq5Fy3YP8b8Gw&s') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .product-details-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin-top: 50px;
+            width: 90%;
+        }
+
+        .product-details-container img {
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #6a3e8f;
+        }
+
+        .product-details-container p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .back-button {
+            background: #8b6cf0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: #6a4fbc;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-details-container">
+        <h1>{{ product['productDisplayName'] }}</h1>
+        <img src="{{ url_for('static', filename=product_image_url) }}" alt="{{ product['productDisplayName']|default('Product Image')}}">
+        <p><strong>Category:</strong> {{ product['masterCategory'] }}</p>
+        <p><strong>Subcategory:</strong> {{ product['subCategory'] }}</p>
+        <p><strong>Color:</strong> {{ product['baseColour'] }}</p>
+        <p><strong>Season:</strong> {{ product['season'] }}</p>
+        <p><strong>Usage:</strong> {{ product['usage'] }}</p>
+        <a href="/products" class="back-button">Back to All Products</a>
+    </div>
+</body>
+</html>
