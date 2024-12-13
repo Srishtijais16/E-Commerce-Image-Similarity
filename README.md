@@ -18,7 +18,7 @@ This project focuses on building an AI-driven system that identifies e-commerce 
 The dataset used for this project is from Kaggle:  
 [E-Commerce Products Images](https://www.kaggle.com/datasets/bhavikjikadara/e-commerce-products-images?select=styles.csv)  
 
-**Deployment on PythonAnywhere:**
+## Deployment on PythonAnywhere
 Upload your project files to PythonAnywhere.
 Install the required dependencies on PythonAnywhere.
 Configure the web app with the Flask application file (app.py).
